@@ -1,13 +1,13 @@
-{
-  "name": "jina-platform",
+﻿{
+  "name": "gina-ai-platform",
   "version": "1.0.0",
-  "description": "Jina Platform - منصة جينا الذكية المتكاملة",
+  "description": "GINA AI Platform - منصة GINA AI الذكية المتكاملة",
   "private": true,
   "workspaces": [
     "core/*",
     "services/*",
     "integrations/*",
-    "jina-pay/*",
+    "gina-pay/*",
     "frontend/web"
   ],
   "scripts": {

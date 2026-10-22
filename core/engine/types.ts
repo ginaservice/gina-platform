@@ -1,12 +1,12 @@
-/**
- * 🧬 Jina Platform — Core Engine
+﻿/**
+ * 🧬 GINA AI Platform — Core Engine
  * الخوارزمية الخماسية للتنفيذ
  * 
  * Phase 1: Architecture Bootstrap
  * Phase 2: Chameleon Skills Layer
  * Phase 3: Security Hardening
  * Phase 4: Google Integration
- * Phase 5: Jina Pay + UI
+ * Phase 5: GINA Pay + UI
  */
 
 export enum ExecutionPhase {
@@ -14,7 +14,7 @@ export enum ExecutionPhase {
   CHAMELEON_SKILLS = 2,
   SECURITY_HARDENING = 3,
   GOOGLE_INTEGRATION = 4,
-  JINA_PAY_UI = 5,
+  GINA_PAY_UI = 5,
 }
 
 export interface PhaseConfig {
@@ -43,7 +43,7 @@ export enum RollbackStrategy {
   FULL_RESET = 'full_reset',  // إعادة تعيين كاملة
 }
 
-export interface JinaEngineConfig {
+export interface GinaEngineConfig {
   platform: {
     name: string;
     version: string;
@@ -52,7 +52,7 @@ export interface JinaEngineConfig {
   phases: PhaseConfig[];
   security: SecurityConfig;
   google: GoogleIntegrationConfig;
-  jinaPay: JinaPayConfig;
+  ginaPay: GinaPayConfig;
 }
 
 export interface SecurityConfig {
@@ -115,7 +115,7 @@ export interface WorkspaceConfig {
   oauthClientSecret: string;
 }
 
-export interface JinaPayConfig {
+export interface GinaPayConfig {
   merchantId: string;
   apiKey: string;
   webhookSecret: string;

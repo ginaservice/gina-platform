@@ -1,5 +1,5 @@
-/**
- * 💳 Jina Pay — نظام الدفع الإلكتروني المتكامل
+﻿/**
+ * 💳 GINA Pay — نظام الدفع الإلكتروني المتكامل
  * 
  * بوابة الدفع | المحفظة الرقمية | المعاملات | الامتثال التنظيمي
  */
@@ -27,7 +27,7 @@ export enum PaymentMethod {
   MOBILE_WALLET = 'mobile_wallet',
   APPLE_PAY = 'apple_pay',
   GOOGLE_PAY = 'google_pay',
-  JINA_WALLET = 'jina_wallet',
+  GINA_WALLET = 'gina_wallet',
 }
 
 export enum Currency {
@@ -81,7 +81,7 @@ export interface TransactionFees {
   currency: Currency;
 }
 
-export interface JinaWallet {
+export interface GinaWallet {
   id: string;
   userId: string;
   balance: Map<Currency, number>;
@@ -114,9 +114,9 @@ export interface WalletLimits {
   currency: Currency;
 }
 
-// ===== Jina Pay Gateway =====
+// ===== GINA Pay Gateway =====
 
-export class JinaPayGateway extends EventEmitter {
+export class GinaPayGateway extends EventEmitter {
   private merchantId: string;
   private apiKey: string;
   private webhookSecret: string;
@@ -294,7 +294,7 @@ export class JinaPayGateway extends EventEmitter {
       [PaymentMethod.MOBILE_WALLET]: 0.02,  // 2.0%
       [PaymentMethod.APPLE_PAY]: 0.025,     // 2.5%
       [PaymentMethod.GOOGLE_PAY]: 0.025,    // 2.5%
-      [PaymentMethod.JINA_WALLET]: 0.005,   // 0.5% - أفضل رسوم!
+      [PaymentMethod.GINA_WALLET]: 0.005,   // 0.5% - أفضل رسوم!
     };
 
     const processingFee = amount * (feeRates[method] || 0.025);
@@ -375,13 +375,13 @@ export class JinaPayGateway extends EventEmitter {
   }
 }
 
-// ===== Jina Wallet Service =====
+// ===== GINA Wallet Service =====
 
-export class JinaWalletService extends EventEmitter {
-  private wallets: Map<string, JinaWallet> = new Map();
+export class GinaWalletService extends EventEmitter {
+  private wallets: Map<string, GinaWallet> = new Map();
 
-  async createWallet(userId: string): Promise<JinaWallet> {
-    const wallet: JinaWallet = {
+  async createWallet(userId: string): Promise<GinaWallet> {
+    const wallet: GinaWallet = {
       id: `wallet_${randomBytes(8).toString('hex')}`,
       userId,
       balance: new Map([[Currency.USD, 0]]),

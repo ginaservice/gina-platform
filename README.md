@@ -1,4 +1,4 @@
-# 🧬 Jina Platform — معمارية جينا الكاملة
+﻿# 🧬 GINA AI Platform — معمارية جينا الكاملة
 
 <div align="center">
 
@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-orange)
 ![Google Integration](https://img.shields.io/badge/Google-Full%20Integration-red)
 
-**منصة جينا الذكية | الجيل القادم من الأنظمة التكيفية**
+**منصة GINA AI الذكية | الجيل القادم من الأنظمة التكيفية**
 
 </div>
 
@@ -19,9 +19,9 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    🧬 JINA PLATFORM v1.0                        │
+│                    🧬 GINA AI PLATFORM v1.0                        │
 ├──────────────┬──────────────┬──────────────┬────────────────────┤
-│  🦎 Chameleon │  🔐 Security  │  🤖 AI Core   │  💳 Jina Pay       │
+│  🦎 Chameleon │  🔐 Security  │  🤖 AI Core   │  💳 GINA Pay       │
 │    Skills    │  Protocols   │   Engine     │   Gateway          │
 ├──────────────┴──────────────┴──────────────┴────────────────────┤
 │              🌐 Google Full Integration Layer                     │
@@ -40,12 +40,12 @@
 | **2** | 🦎 Chameleon Skills Layer | طبقة المهارات التكيفية والذكاء السياقي | 🔄 In Progress |
 | **3** | 🔐 Security Hardening | تصليب بروتوكولات الأمان والتشفير | 🔄 In Progress |
 | **4** | 🌐 Google Integration | دمج بيئة جوجل الكاملة | 📋 Planned |
-| **5** | 💳 Jina Pay + UI | نظام الدفع والواجهات | 📋 Planned |
+| **5** | 💳 GINA Pay + UI | نظام الدفع والواجهات | 📋 Planned |
 
 ## 📁 هيكل المشروع
 
 ```
-jina-platform/
+gina-ai-platform/
 ├── 📐 core/                    # النواة المركزية
 │   ├── engine/                 # محرك التنفيذ
 │   ├── algorithms/             # الخوارزميات الخماسية
@@ -75,7 +75,7 @@ jina-platform/
 │   ├── scheduler/              # المجدول
 │   └── notifications/          # الإشعارات
 │
-├── 💳 jina-pay/               # نظام الدفع جينا باي
+├── 💳 gina-pay/               # نظام الدفع جينا باي
 │   ├── gateway/               # بوابة الدفع
 │   ├── wallet/                # المحفظة الرقمية
 │   ├── transactions/          # إدارة المعاملات
@@ -102,8 +102,8 @@ jina-platform/
 
 ```bash
 # 1. استنساخ المستودع
-git clone https://github.com/YOUR_ORG/jina-platform.git
-cd jina-platform
+git clone https://github.com/YOUR_ORG/gina-ai-platform.git
+cd gina-ai-platform
 
 # 2. تثبيت المتطلبات
 npm install
@@ -122,6 +122,6 @@ npm run dev
 
 - [📐 وثيقة المعمارية](./docs/architecture/ARCHITECTURE.md)
 - [🔐 بروتوكولات الأمان](./docs/security/SECURITY.md)
-- [💳 دليل جينا باي](./jina-pay/README.md)
+- [💳 دليل جينا باي](./gina-pay/README.md)
 - [🌐 دليل تكامل جوجل](./integrations/google/README.md)
 - [📡 توثيق API](./docs/api/API.md)

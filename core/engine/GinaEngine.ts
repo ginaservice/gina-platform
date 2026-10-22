@@ -1,23 +1,23 @@
-/**
- * 🧬 Jina Core Engine — محرك التنفيذ المركزي
+﻿/**
+ * 🧬 GINA AI Core Engine — محرك التنفيذ المركزي
  * الخوارزمية الخماسية: التنفيذ المتسلسل مع إدارة الحالة
  */
 
 import { EventEmitter } from 'events';
 import {
   ExecutionPhase,
-  JinaEngineConfig,
+  GinaEngineConfig,
   PhaseConfig,
   ValidationResult,
 } from './types';
 
-export class JinaEngine extends EventEmitter {
-  private config: JinaEngineConfig;
+export class GinaEngine extends EventEmitter {
+  private config: GinaEngineConfig;
   private currentPhase: ExecutionPhase | null = null;
   private phaseResults: Map<ExecutionPhase, ValidationResult> = new Map();
   private executionLog: ExecutionLogEntry[] = [];
 
-  constructor(config: JinaEngineConfig) {
+  constructor(config: GinaEngineConfig) {
     super();
     this.config = config;
     this.setupEventListeners();
@@ -177,7 +177,7 @@ export class JinaEngine extends EventEmitter {
   }
 
   private setupEventListeners(): void {
-    this.on('engine:start', () => console.log('🚀 Jina Engine starting...'));
+    this.on('engine:start', () => console.log('🚀 GINA Engine starting...'));
     this.on('phase:complete', ({ phase }) => console.log(`✅ Phase ${phase} complete`));
     this.on('phase:error', ({ phase, error }) => console.error(`❌ Phase ${phase} error:`, error));
     this.on('engine:complete', (report) => {

@@ -1,4 +1,4 @@
-{
+﻿{
   "compilerOptions": {
     "target": "ES2022",
     "module": "NodeNext",
@@ -17,12 +17,12 @@
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "paths": {
-      "@jina/core/*": ["./core/*"],
-      "@jina/security/*": ["./security/*"],
-      "@jina/skills/*": ["./skills/*"],
-      "@jina/integrations/*": ["./integrations/*"],
-      "@jina/pay/*": ["./jina-pay/*"],
-      "@jina/services/*": ["./services/*"]
+      "@gina/core/*": ["./core/*"],
+      "@gina/security/*": ["./security/*"],
+      "@gina/skills/*": ["./skills/*"],
+      "@gina/integrations/*": ["./integrations/*"],
+      "@gina/pay/*": ["./gina-pay/*"],
+      "@gina/services/*": ["./services/*"]
     },
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -35,7 +35,7 @@
     "security/**/*.ts",
     "integrations/**/*.ts",
     "services/**/*.ts",
-    "jina-pay/**/*.ts",
+    "gina-pay/**/*.ts",
     "tests/**/*.ts"
   ],
   "exclude": [

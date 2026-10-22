@@ -1,4 +1,4 @@
-version: '3.9'
+﻿version: '3.9'
 
 services:
   # ===== API Gateway =====
@@ -6,19 +6,19 @@ services:
     build:
       context: ./services/api-gateway
       dockerfile: Dockerfile
-    container_name: jina-api-gateway
+    container_name: gina-ai-gateway
     ports:
       - "3000:3000"
     environment:
       - NODE_ENV=development
       - PORT=3000
       - REDIS_URL=redis://redis:6379
-      - DATABASE_URL=postgresql://jina:jina_secret@postgres:5432/jina_db
+      - DATABASE_URL=postgresql://gina:gina_secret@postgres:5432/gina_db
     depends_on:
       - redis
       - postgres
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
@@ -31,7 +31,7 @@ services:
     build:
       context: ./services/orchestrator
       dockerfile: Dockerfile
-    container_name: jina-orchestrator
+    container_name: gina-orchestrator
     ports:
       - "3001:3001"
     environment:
@@ -40,7 +40,7 @@ services:
     depends_on:
       - redis
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
   # ===== Frontend Web =====
@@ -48,50 +48,50 @@ services:
     build:
       context: ./frontend/web
       dockerfile: Dockerfile
-    container_name: jina-web
+    container_name: gina-web
     ports:
       - "3100:3100"
     environment:
       - NODE_ENV=development
       - NEXT_PUBLIC_API_URL=http://api-gateway:3000
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
   # ===== Redis Cache =====
   redis:
     image: redis:7-alpine
-    container_name: jina-redis
+    container_name: gina-redis
     ports:
       - "6379:6379"
     volumes:
       - redis-data:/data
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
-    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-jina_redis_secret}
+    command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-gina_redis_secret}
 
   # ===== PostgreSQL Database =====
   postgres:
     image: postgres:16-alpine
-    container_name: jina-postgres
+    container_name: gina-postgres
     ports:
       - "5432:5432"
     environment:
-      POSTGRES_USER: jina
-      POSTGRES_PASSWORD: ${DB_PASSWORD:-jina_secret}
-      POSTGRES_DB: jina_db
+      POSTGRES_USER: gina
+      POSTGRES_PASSWORD: ${DB_PASSWORD:-gina_secret}
+      POSTGRES_DB: gina_db
     volumes:
       - postgres-data:/var/lib/postgresql/data
       - ./infra/docker/postgres-init.sql:/docker-entrypoint-initdb.d/init.sql
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
   # ===== Nginx Reverse Proxy =====
   nginx:
     image: nginx:alpine
-    container_name: jina-nginx
+    container_name: gina-nginx
     ports:
       - "80:80"
       - "443:443"
@@ -102,25 +102,25 @@ services:
       - api-gateway
       - web
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
   # ===== Prometheus Monitoring =====
   prometheus:
     image: prom/prometheus:latest
-    container_name: jina-prometheus
+    container_name: gina-prometheus
     ports:
       - "9090:9090"
     volumes:
       - ./infra/docker/prometheus.yml:/etc/prometheus/prometheus.yml:ro
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
   # ===== Grafana Dashboard =====
   grafana:
     image: grafana/grafana:latest
-    container_name: jina-grafana
+    container_name: gina-grafana
     ports:
       - "3200:3000"
     environment:
@@ -128,7 +128,7 @@ services:
     volumes:
       - grafana-data:/var/lib/grafana
     networks:
-      - jina-network
+      - gina-network
     restart: unless-stopped
 
 volumes:
@@ -137,7 +137,7 @@ volumes:
   grafana-data:
 
 networks:
-  jina-network:
+  gina-network:
     driver: bridge
     ipam:
       config:
