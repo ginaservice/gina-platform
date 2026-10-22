@@ -1,5 +1,5 @@
-﻿/**
- * 🔐 GINA AI Security Protocols — بروتوكولات الأمان الصارمة
+/**
+ * 🔐 GINA Security Protocols — بروتوكولات الأمان الصارمة
  * 
  * Zero-Trust Architecture | E2E Encryption | MFA | Audit Logs
  * معمارية الثقة الصفرية | التشفير الكامل | المصادقة متعددة العوامل

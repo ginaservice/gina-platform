@@ -1,4 +1,4 @@
-﻿# 🧬 GINA AI Platform — معمارية جينا الكاملة
+# 🧬 GINA Platform — معمارية جينا الكاملة
 
 <div align="center">
 
@@ -7,7 +7,7 @@
 ![License](https://img.shields.io/badge/license-MIT-orange)
 ![Google Integration](https://img.shields.io/badge/Google-Full%20Integration-red)
 
-**منصة GINA AI الذكية | الجيل القادم من الأنظمة التكيفية**
+**منصة جينا الذكية | الجيل القادم من الأنظمة التكيفية**
 
 </div>
 
@@ -19,7 +19,7 @@
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    🧬 GINA AI PLATFORM v1.0                        │
+│                    🧬 GINA PLATFORM v1.0                        │
 ├──────────────┬──────────────┬──────────────┬────────────────────┤
 │  🦎 Chameleon │  🔐 Security  │  🤖 AI Core   │  💳 GINA Pay       │
 │    Skills    │  Protocols   │   Engine     │   Gateway          │
@@ -45,7 +45,7 @@
 ## 📁 هيكل المشروع
 
 ```
-gina-ai-platform/
+gina-platform/
 ├── 📐 core/                    # النواة المركزية
 │   ├── engine/                 # محرك التنفيذ
 │   ├── algorithms/             # الخوارزميات الخماسية
@@ -102,8 +102,8 @@ gina-ai-platform/
 
 ```bash
 # 1. استنساخ المستودع
-git clone https://github.com/YOUR_ORG/gina-ai-platform.git
-cd gina-ai-platform
+git clone https://github.com/ginaservice/gina-platform.git
+cd gina-platform
 
 # 2. تثبيت المتطلبات
 npm install

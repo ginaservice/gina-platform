@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 🌐 Google Full Integration Layer — طبقة تكامل جوجل الكاملة
  * 
  * Firebase | Gemini AI | Google Cloud | Workspace | Maps | Pay
@@ -81,7 +81,7 @@ export class FirestoreService {
 
 export class StorageService {
   async upload(path: string, file: Buffer, metadata?: StorageMetadata): Promise<string> {
-    return `https://storage.googleapis.com/gina-ai-platform/${path}`;
+    return `https://storage.googleapis.com/gina-platform/${path}`;
   }
 
   async download(path: string): Promise<Buffer> {
@@ -93,7 +93,7 @@ export class StorageService {
   }
 
   async getSignedUrl(path: string, expiresIn: number): Promise<string> {
-    return `https://storage.googleapis.com/gina-ai-platform/${path}?signature=xxx&expires=${Date.now() + expiresIn}`;
+    return `https://storage.googleapis.com/gina-platform/${path}?signature=xxx&expires=${Date.now() + expiresIn}`;
   }
 }
 

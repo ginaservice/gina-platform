@@ -1,4 +1,4 @@
-name: Jina Platform CI/CD
+name: GINA Platform CI/CD
 
 on:
   push:
@@ -71,9 +71,9 @@ jobs:
       postgres:
         image: postgres:16-alpine
         env:
-          POSTGRES_USER: jina
-          POSTGRES_PASSWORD: jina_test
-          POSTGRES_DB: jina_test
+          POSTGRES_USER: gina
+          POSTGRES_PASSWORD: gina_test
+          POSTGRES_DB: gina_test
         ports: ['5432:5432']
       redis:
         image: redis:7-alpine
@@ -88,7 +88,7 @@ jobs:
       - run: npm ci
       - run: npm run test:integration
         env:
-          DATABASE_URL: postgresql://jina:jina_test@localhost:5432/jina_test
+          DATABASE_URL: postgresql://gina:gina_test@localhost:5432/gina_test
           REDIS_URL: redis://localhost:6379
 
   # ===== Security Tests =====

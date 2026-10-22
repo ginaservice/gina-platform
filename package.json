@@ -1,7 +1,7 @@
-﻿{
-  "name": "gina-ai-platform",
+{
+  "name": "gina-platform",
   "version": "1.0.0",
-  "description": "GINA AI Platform - منصة GINA AI الذكية المتكاملة",
+  "description": "GINA Platform - منصة جينا الذكية المتكاملة",
   "private": true,
   "workspaces": [
     "core/*",

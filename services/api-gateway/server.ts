@@ -1,5 +1,5 @@
-﻿/**
- * 🌐 GINA AI API Gateway — بوابة الـ API المركزية
+/**
+ * 🌐 GINA API Gateway — بوابة الـ API المركزية
  */
 
 import Fastify, { FastifyInstance, FastifyRequest, FastifyReply } from 'fastify';
@@ -211,7 +211,7 @@ async function start(): Promise<void> {
     const host = process.env.API_HOST || '0.0.0.0';
 
     await app.listen({ port, host });
-    console.log(`🚀 GINA AI API Gateway running at http://${host}:${port}`);
+    console.log(`🚀 GINA API Gateway running at http://${host}:${port}`);
   } catch (error) {
     app.log.error(error);
     process.exit(1);

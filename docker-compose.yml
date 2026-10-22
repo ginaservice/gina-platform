@@ -1,4 +1,4 @@
-﻿version: '3.9'
+version: '3.9'
 
 services:
   # ===== API Gateway =====
@@ -6,7 +6,7 @@ services:
     build:
       context: ./services/api-gateway
       dockerfile: Dockerfile
-    container_name: gina-ai-gateway
+    container_name: gina-api-gateway
     ports:
       - "3000:3000"
     environment:

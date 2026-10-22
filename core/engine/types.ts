@@ -1,5 +1,5 @@
-﻿/**
- * 🧬 GINA AI Platform — Core Engine
+/**
+ * 🧬 GINA Platform — Core Engine
  * الخوارزمية الخماسية للتنفيذ
  * 
  * Phase 1: Architecture Bootstrap
