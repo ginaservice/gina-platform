@@ -1,0 +1,46 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "lib": ["ES2022"],
+    "outDir": "./dist",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "paths": {
+      "@jina/core/*": ["./core/*"],
+      "@jina/security/*": ["./security/*"],
+      "@jina/skills/*": ["./skills/*"],
+      "@jina/integrations/*": ["./integrations/*"],
+      "@jina/pay/*": ["./jina-pay/*"],
+      "@jina/services/*": ["./services/*"]
+    },
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [
+    "core/**/*.ts",
+    "skills/**/*.ts",
+    "security/**/*.ts",
+    "integrations/**/*.ts",
+    "services/**/*.ts",
+    "jina-pay/**/*.ts",
+    "tests/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "frontend"
+  ]
+}
